@@ -14,6 +14,8 @@
 		BC4EBA2F2C47F11200057906 /* whiperkit_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EBA2E2C47F11200057906 /* whiperkit_swiftTests.swift */; };
 		BC4EBA392C47F11200057906 /* whiperkit_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EBA382C47F11200057906 /* whiperkit_swiftUITests.swift */; };
 		BC4EBA3B2C47F11200057906 /* whiperkit_swiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EBA3A2C47F11200057906 /* whiperkit_swiftUITestsLaunchTests.swift */; };
+		BC4EBA492C47F12D00057906 /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = BC4EBA482C47F12D00057906 /* WhisperKit */; };
+		BC4EBA4B2C47F22600057906 /* whisper_sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC4EBA4A2C47F22600057906 /* whisper_sample.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		BC4EBA342C47F11200057906 /* whiperkit_swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whiperkit_swiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4EBA382C47F11200057906 /* whiperkit_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whiperkit_swiftUITests.swift; sourceTree = "<group>"; };
 		BC4EBA3A2C47F11200057906 /* whiperkit_swiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whiperkit_swiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BC4EBA4A2C47F22600057906 /* whisper_sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whisper_sample.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4EBA492C47F12D00057906 /* WhisperKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +99,7 @@
 		BC4EBA1B2C47F11100057906 /* whiperkit_swift */ = {
 			isa = PBXGroup;
 			children = (
+				BC4EBA4A2C47F22600057906 /* whisper_sample.mp3 */,
 				BC4EBA1C2C47F11100057906 /* whiperkit_swiftApp.swift */,
 				BC4EBA1E2C47F11100057906 /* ContentView.swift */,
 				BC4EBA202C47F11200057906 /* Assets.xcassets */,
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = whiperkit_swift;
+			packageProductDependencies = (
+				BC4EBA482C47F12D00057906 /* WhisperKit */,
+			);
 			productName = whiperkit_swift;
 			productReference = BC4EBA192C47F11100057906 /* whiperkit_swift.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +225,9 @@
 				Base,
 			);
 			mainGroup = BC4EBA102C47F11100057906;
+			packageReferences = (
+				BC4EBA472C47F12D00057906 /* XCRemoteSwiftPackageReference "whisperkit" */,
+			);
 			productRefGroup = BC4EBA1A2C47F11100057906 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4EBA4B2C47F22600057906 /* whisper_sample.mp3 in Resources */,
 				BC4EBA252C47F11200057906 /* Preview Assets.xcassets in Resources */,
 				BC4EBA212C47F11200057906 /* Assets.xcassets in Resources */,
 			);
@@ -609,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC4EBA472C47F12D00057906 /* XCRemoteSwiftPackageReference "whisperkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argmaxinc/whisperkit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC4EBA482C47F12D00057906 /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC4EBA472C47F12D00057906 /* XCRemoteSwiftPackageReference "whisperkit" */;
+			productName = WhisperKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC4EBA112C47F11100057906 /* Project object */;
 }
